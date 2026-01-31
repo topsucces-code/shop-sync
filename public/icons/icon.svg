@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="64" fill="#000"/>
+  <g fill="#fff">
+    <path d="M256 100c-86 0-156 70-156 156s70 156 156 156 156-70 156-156-70-156-156-156zm0 280c-68.4 0-124-55.6-124-124s55.6-124 124-124 124 55.6 124 124-55.6 124-124 124z"/>
+    <path d="M256 180c-41.9 0-76 34.1-76 76s34.1 76 76 76 76-34.1 76-76-34.1-76-76-76zm0 120c-24.3 0-44-19.7-44-44s19.7-44 44-44 44 19.7 44 44-19.7 44-44 44z"/>
+    <circle cx="256" cy="256" r="20"/>
+    <path d="M340 140l32-32M172 140l-32-32M340 372l32 32M172 372l-32 32" stroke="#fff" stroke-width="16" stroke-linecap="round"/>
+  </g>
+  <text x="256" y="440" text-anchor="middle" font-family="system-ui" font-weight="bold" font-size="48" fill="#fff">SYNC</text>
+</svg>
