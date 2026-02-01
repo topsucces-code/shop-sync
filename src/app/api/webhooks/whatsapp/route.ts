@@ -133,7 +133,9 @@ export async function POST(request: NextRequest) {
     console.log('WhatsApp Webhook received:', JSON.stringify(webhook, null, 2))
 
     // Only process incoming messages (not from ourselves)
-    if (webhook.event !== 'messages.upsert' || webhook.data.key.fromMe) {
+    // Evolution API sends event as MESSAGES_UPSERT (uppercase)
+    const eventName = webhook.event?.toLowerCase()
+    if (eventName !== 'messages.upsert' || webhook.data.key.fromMe) {
       return NextResponse.json({ success: true })
     }
 
