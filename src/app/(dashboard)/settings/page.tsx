@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Store, Camera, Loader2, Check, Link as LinkIcon, Crown } from 'lucide-react'
+import { Store, Camera, Loader2, Check, Link as LinkIcon, Crown, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -312,7 +312,7 @@ export default function SettingsPage() {
           </div>
 
           <div>
-            <Label htmlFor="phone">Téléphone</Label>
+            <Label htmlFor="phone">Téléphone / WhatsApp</Label>
             <Input
               id="phone"
               type="tel"
@@ -320,6 +320,16 @@ export default function SettingsPage() {
               onChange={(e) => setPhone(e.target.value)}
               placeholder="07 00 00 00 00"
             />
+            {phone && (
+              <div className="mt-2 p-3 bg-green-50 dark:bg-green-950 rounded-lg">
+                <p className="text-xs text-green-700 dark:text-green-300 mb-1">
+                  Lien WhatsApp généré :
+                </p>
+                <code className="text-xs break-all text-green-800 dark:text-green-200">
+                  https://wa.me/225{phone.replace(/\D/g, '')}
+                </code>
+              </div>
+            )}
           </div>
 
           <div>
